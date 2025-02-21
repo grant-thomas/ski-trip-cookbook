@@ -13,6 +13,7 @@ export async function GET() {
 
 		return NextResponse.json({ message: 'Trips added successfully!' });
 	} catch (error) {
+		console.error('Failed to add trips:', error);
 		return NextResponse.json({ error: 'Failed to add trips' }, { status: 500 });
 	}
 }

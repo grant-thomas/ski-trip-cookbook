@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Trip, Meal } from '../types/objects';
 import { saveTripChanges } from '../app/lib/firestore';
-import { storage, db } from '../app/lib/firebase';
-import { doc, updateDoc } from 'firebase/firestore';
-import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 type MealDetailsProps = {
 	meal: Meal;
