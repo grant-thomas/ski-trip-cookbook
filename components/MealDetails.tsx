@@ -116,7 +116,7 @@ const MealDetails: React.FC<MealDetailsProps> = ({ meal, trip, onClose }) => {
 					<button
 						className='px-4 py-2 bg-gray-600 text-white rounded'
 						onClick={onClose}>
-						← Back to List
+						← Back
 					</button>
 					<button
 						className='px-4 py-2 mb-2 bg-gray-600 text-white rounded'
