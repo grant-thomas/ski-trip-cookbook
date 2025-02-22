@@ -12,7 +12,7 @@ const TripSection: React.FC<TripSectionProps> = ({ trip }) => {
 	const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
 
 	return (
-		<div className='mb-8'>
+		<div className='mb-8 text-white'>
 			{selectedMeal ? (
 				<MealDetails
 					meal={selectedMeal}

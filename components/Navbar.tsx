@@ -14,9 +14,6 @@ const Navbar = () => {
 				<Link href='/' className='hover:text-gray-300'>
 					Trips
 				</Link>
-				<Link href='/' className='hover:text-gray-300'>
-					Favorites
-				</Link>
 			</div>
 		</nav>
 	);
