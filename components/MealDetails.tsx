@@ -174,7 +174,7 @@ const MealDetails: React.FC<MealDetailsProps> = ({ meal, trip, onClose }) => {
 							],
 						})
 					}>
-					+ Add Ingredients
+					+ Add Ingredients Section
 				</button>
 			)}
 
@@ -268,7 +268,7 @@ const MealDetails: React.FC<MealDetailsProps> = ({ meal, trip, onClose }) => {
 							],
 						})
 					}>
-					+ Add Directions
+					+ Add Directions Section
 				</button>
 			)}
 
