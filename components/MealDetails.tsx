@@ -116,7 +116,9 @@ const MealDetails: React.FC<MealDetailsProps> = ({ meal, trip, onClose }) => {
 				<div>
 					<h2 className='text-2xl font-bold text-gray-800'>{meal.title}</h2>
 					<p className='text-gray-800 mb-2'>
-						Cooked by: {meal.cookedBy.join(', ')}
+						Cooked by:
+						<br />
+						{meal.cookedBy.join(', ')}
 					</p>
 				</div>
 				<div className='flex flex-col items-end gap-1'>
