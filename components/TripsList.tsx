@@ -23,7 +23,7 @@ export default function TripsList() {
 			{trips.length > 0 ? (
 				trips.map((trip) => <TripSection key={trip.id} trip={trip} />)
 			) : (
-				<p className='text-center text-gray-600'>No trips available.</p>
+				<p className='text-center text-gray-300'>Loading trips...</p>
 			)}
 		</div>
 	);
