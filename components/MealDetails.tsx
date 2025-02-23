@@ -13,44 +13,6 @@ type MealDetailsProps = {
 	onClose: () => void;
 };
 
-// Helper: Adjust the height of a textarea based on its scrollHeight.
-const adjustTextareaHeight = (textarea: HTMLTextAreaElement | null) => {
-	if (textarea) {
-		textarea.style.height = 'auto';
-		textarea.style.height = `${textarea.scrollHeight}px`;
-	}
-};
-
-// Helper: Filter ingredient sections.
-// A section is kept if at least one ingredient is non-empty or the title is non-empty.
-const filterIngredientSections = (sections: IngredientSection[]) =>
-	sections.filter((section) => {
-		const title = section.title?.trim() || '';
-		const validIngredients = section.ingredients.filter(
-			(ing) => ing.trim() !== ''
-		);
-		return !(title === '' && validIngredients.length === 0);
-	});
-
-// Helper: Process direction sections.
-// - Completely empty sections (title and steps blank) are discarded.
-// - If title is blank but there are valid steps, assign default title "Directions".
-const filterDirectionSections = (sections: DirectionSection[]) =>
-	sections.reduce<DirectionSection[]>((acc, section) => {
-		const title = section.title?.trim() || '';
-		const validSteps = section.steps.filter((step) => step.trim() !== '');
-
-		if (title === '' && validSteps.length === 0) {
-			return acc;
-		}
-		if (title === '' && validSteps.length > 0) {
-			acc.push({ ...section, title: 'Directions', steps: validSteps });
-		} else {
-			acc.push({ ...section, title, steps: validSteps });
-		}
-		return acc;
-	}, []);
-
 const MealDetails: React.FC<MealDetailsProps> = ({ meal, trip, onClose }) => {
 	const [editedMeal, setEditedMeal] = useState<Meal>(meal);
 	const [isEditing, setIsEditing] = useState(false);
@@ -78,6 +40,44 @@ const MealDetails: React.FC<MealDetailsProps> = ({ meal, trip, onClose }) => {
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, [isEditing]);
+
+	// Helper: Adjust the height of a textarea based on its scrollHeight.
+	const adjustTextareaHeight = (textarea: HTMLTextAreaElement | null) => {
+		if (textarea) {
+			textarea.style.height = 'auto';
+			textarea.style.height = `${textarea.scrollHeight}px`;
+		}
+	};
+
+	// Helper: Filter ingredient sections.
+	// A section is kept if at least one ingredient is non-empty or the title is non-empty.
+	const filterIngredientSections = (sections: IngredientSection[]) =>
+		sections.filter((section) => {
+			const title = section.title?.trim() || '';
+			const validIngredients = section.ingredients.filter(
+				(ing) => ing.trim() !== ''
+			);
+			return !(title === '' && validIngredients.length === 0);
+		});
+
+	// Helper: Process direction sections.
+	// - Completely empty sections (title and steps blank) are discarded.
+	// - If title is blank but there are valid steps, assign default title "Directions".
+	const filterDirectionSections = (sections: DirectionSection[]) =>
+		sections.reduce<DirectionSection[]>((acc, section) => {
+			const title = section.title?.trim() || '';
+			const validSteps = section.steps.filter((step) => step.trim() !== '');
+
+			if (title === '' && validSteps.length === 0) {
+				return acc;
+			}
+			if (title === '' && validSteps.length > 0) {
+				acc.push({ ...section, title: 'Directions', steps: validSteps });
+			} else {
+				acc.push({ ...section, title, steps: validSteps });
+			}
+			return acc;
+		}, []);
 
 	// Save changes: filter sections and update Firestore & local state.
 	const handleSaveChanges = async () => {
