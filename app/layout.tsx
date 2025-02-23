@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: 'Ski Trip Cookbook',
 	description: 'Created by GT',
+	icons: {
+		icon: '/favicon.ico',
+	},
 };
 
 export default function RootLayout({
