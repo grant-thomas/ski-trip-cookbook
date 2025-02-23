@@ -7,14 +7,6 @@ const Navbar = () => {
 			<Link href='/' className='text-xl font-bold'>
 				Ski Trip Cookbook
 			</Link>
-			<div className='flex gap-4'>
-				<Link href='/' className='hover:text-gray-300'>
-					Home
-				</Link>
-				<Link href='/' className='hover:text-gray-300'>
-					Trips
-				</Link>
-			</div>
 		</nav>
 	);
 };
