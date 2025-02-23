@@ -64,44 +64,6 @@ const MealDetails: React.FC<MealDetailsProps> = ({ meal, trip, onClose }) => {
 		setIsEditing(false);
 	};
 
-	// const [imageUpload, setImageUpload] = useState<File | null>(null);
-	// const [uploading, setUploading] = useState(false);
-
-	// // 🔹 Function to handle image upload
-	// const handleImageUpload = async () => {
-	// 	if (!imageUpload) return;
-
-	// 	const imageRef = ref(storage, `meal-images/${meal.title}-${Date.now()}`);
-	// 	const uploadTask = uploadBytesResumable(imageRef, imageUpload);
-
-	// 	setUploading(true);
-
-	// 	uploadTask.on(
-	// 		'state_changed',
-	// 		(snapshot) => {
-	// 			const progress =
-	// 				(snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-	// 			console.log(`Upload is ${progress}% done`);
-	// 		},
-	// 		(error) => {
-	// 			console.error('Upload failed', error);
-	// 			setUploading(false);
-	// 		},
-	// 		async () => {
-	// 			const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-	// 			console.log('File available at', downloadURL);
-
-	// 			// 🔹 Update Firestore with new image URL
-	// 			const mealRef = doc(db, 'meals', meal.title);
-	// 			await updateDoc(mealRef, { imageUrl: downloadURL });
-
-	// 			// Update local state
-	// 			setEditedMeal({ ...editedMeal, imageUrl: downloadURL });
-	// 			setUploading(false);
-	// 		}
-	// 	);
-	// };
-
 	return (
 		<div className='p-6 mt-2 max-w-3xl mx-auto bg-white rounded-lg shadow-lg opacity-80'>
 			{/* Top Section: Title & Buttons */}
@@ -114,12 +76,12 @@ const MealDetails: React.FC<MealDetailsProps> = ({ meal, trip, onClose }) => {
 				</div>
 				<div className='flex flex-col items-end gap-1'>
 					<button
-						className='px-4 py-2 bg-gray-600 text-white rounded'
+						className='px-4 py-2 bg-gray-600 text-white rounded leading-none whitespace-nowrap'
 						onClick={onClose}>
 						← Back
 					</button>
 					<button
-						className='px-4 py-2 mb-2 bg-gray-600 text-white rounded'
+						className='px-4 py-2 mb-2 bg-gray-600 text-white rounded leading-none whitespace-nowrap'
 						onClick={() => setIsEditing(!isEditing)}>
 						{isEditing ? 'Cancel' : 'Edit'}
 					</button>
