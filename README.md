@@ -13,11 +13,11 @@ You can view a live demo of the app deployed on Vercel by clicking the link belo
 
 **Beaver Creek 2025 Ski Trip View**
 
-<img src="./assets/screenshots/SkiTripCookbook_Home.png" width="600"/>
+<img src="./assets/screenshots/SkiTripCookbook_Home.png"/>
 
 **Red Beans and Rice Recipe View**
 
-<img src="./assets/screenshots/SkiTripCookbook_Readbeans.png" width="600"/>
+<img src="./assets/screenshots/SkiTripCookbook_Readbeans.png"/>
 
 ## Features
 
