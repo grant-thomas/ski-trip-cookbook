@@ -33,6 +33,7 @@ All data is stored and synced using Firebase, enabling persistent access across 
 SkiTripCookbook is built using:
 
 - Next.js
+- Tailwind.css
 - Firebase (Firestore database)
 - Vercel (Deployment)
 
