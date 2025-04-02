@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SkiTripCookbook
+## _A digital cookbook for your favorite ski trip meals_
 
-## Getting Started
+SkiTripCookbook is a collaborative web app designed for skiers to save, organize, and revisit their favorite mountain meals. Whether you're returning to a classic dish from last year's trip or discovering a recipe shared by a friend, this digital cookbook helps preserve the flavors of each ski season.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+You can view a live demo of the app deployed on Vercel by clicking the link below:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[SkiTripCookbook - Live Demo](https://ski-trip-cookbook.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Screenshots
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Beaver Creek 2025 Ski Trip View**
 
-## Learn More
+<img src="./assets/screenshots/SkiTripCookbook_Home.png" width="600"/>
 
-To learn more about Next.js, take a look at the following resources:
+**Red Beans and Rice Recipe View**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img src="./assets/screenshots/SkiTripCookbook_Readbeans.png" width="600"/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- Add, update, and delete your own recipes (stored in Firebase)
+- Browse and view recipes shared by other users
+- Organize recipes by specific ski trips
+- Future update will allow users to create custom trips and assign recipes to each trip
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All data is stored and synced using Firebase, enabling persistent access across devices and between trips.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech
+
+SkiTripCookbook is built using:
+
+- Next.js
+- Firebase (Firestore database)
+- Vercel (Deployment)
+
+## Acknowledgements
+
+SkiTripCookbook is a personal project created to explore collaborative web apps, Firebase integration, and full-stack development with Next.js. All example data and recipes are for demonstration purposes.
