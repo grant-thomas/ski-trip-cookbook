@@ -1,4 +1,4 @@
-# SkiTripCookbook
+# SkiTrip Cookbook
 ## _A digital cookbook for your favorite ski trip meals_
 
 SkiTripCookbook is a collaborative web app designed for skiers to save, organize, and revisit their favorite mountain meals. Whether you're returning to a classic dish from last year's trip or discovering a recipe shared by a friend, this digital cookbook helps preserve the flavors of each ski season.
